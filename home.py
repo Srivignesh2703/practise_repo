@@ -43,3 +43,34 @@ class LinkedList:
         while a.next is not None:
             a = a.next
         a.next = new_node
+
+    def insert_at_middle(self,data,position):
+        new_node = Node(data)
+        prev = self.head
+        a = prev.next
+        for i in range(position-1):
+            a = a.next
+            prev = prev.next
+        new_node.next = a
+        prev.next = new_node
+
+    def delete_at_beginning(self):
+        a = self.head
+        self.head = a.next
+
+    def delete_at_end(self):
+        prev = self.head
+        a = prev.next
+        while a.next is not None:
+            a = a.next
+            prev = prev.next
+        prev.next = None
+    
+    def delete_at_position(self, position):
+        prev = self.head
+        a = self.head
+        for i in range(position-1):
+            prev = prev.next
+            a = a.next
+        prev.next = a.next
+        
