@@ -11,6 +11,8 @@ def home():
 def design():
     return "some design"
 
+if __name__ == "__main__":
+    app.run(debug=True)
 
 class Node:
     def __init__(self,data):
@@ -34,3 +36,10 @@ class LinkedList:
         new_node = Node(data)
         new_node.next = self.head
         self.head = new_node.next
+
+    def insert_at_end(self,data):
+        new_node = Node(data)
+        a = self.head
+        while a.next is not None:
+            a = a.next
+        a.next = new_node
