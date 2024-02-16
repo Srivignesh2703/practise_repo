@@ -10,8 +10,6 @@ def home():
 @app.route('/design')
 def design():
     return "some design"
-<<<<<<< HEAD
-=======
 
 
 class Node:
@@ -36,4 +34,3 @@ class LinkedList:
         new_node = Node(data)
         new_node.next = self.head
         self.head = new_node.next
->>>>>>> emergency-fix
