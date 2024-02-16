@@ -1,0 +1,8 @@
+body{
+    display: flex;
+    box-sizing: border-box;
+    z-index: -1;
+}
+h2{
+    background-color: blue;
+}
